@@ -6,5 +6,11 @@ app.controller("myCtrl", function($scope){
 
 	$scope.addItem = function(){
 		$scope.products.push($scope.newItem);
+		$("#new_item").val("");
 	}
+
+	$scope.removeItem = function(item){
+		$scope.products.splice(item, 1);
+	}
+
 });
